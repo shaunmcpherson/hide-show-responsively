@@ -17,39 +17,55 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+}
+
+.dino-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
 .dino {
-  display: inline-block;
-  text-align: center;
+  display: flex;
 }
 
 .dino img {
   width: 100%;
 }
 
+.dino:nth-of-type(2),
+.dino:nth-of-type(4) {
+  display: none;
+}
+
 @media only screen and (min-width: 25em) {
 
-  .dino {
-    display: inline-block;
-    text-align: center;
+  .dino-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .dino img {
-    width: 100%;
+  .dino:nth-of-type(2),
+  .dino:nth-of-type(4) {
+    display: flex;
+  }
+
+  .dino {
+    width: 50%;
   }
 
 }
 
 @media only screen and (min-width: 38em) {
 
-  .dino-wrap {
-    display: inline;
-    position: relative;
+  .dino:nth-of-type(1) {
+    display: none;
   }
 
   .dino {
-    display: inline-flex;
-    position: absolute;
-    width: 50%;
+    width: 33.3333%;
   }
 
 }
@@ -61,21 +77,12 @@ html {
     line-height: 1.5;
   }
 
-  header {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: left;
+  .dino:nth-of-type(1) {
+    display: flex;
   }
 
-  h1,
-  nav {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  h1 {
-    margin-bottom: 0;
-    margin-right: 1.5rem;
+  .dino {
+    width: 25%;
   }
 
 }
