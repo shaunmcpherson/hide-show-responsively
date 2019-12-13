@@ -33,7 +33,7 @@ body {
 
 img {
   width: 100%;
-  display: flex;
+  display: block;
 }
 
 .dino:nth-of-type(2),
